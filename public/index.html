@@ -18,9 +18,10 @@
     />
     <link
       rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css"
-      integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -28,15 +29,23 @@
       integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l"
       crossorigin="anonymous"
     />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/added-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -45,12 +54,12 @@
       <span>tweeter</span>
       <div class="nav_new_tweet">
         <p><span>Write</span> a new tweet</p>
-        <i class="fad fa-chevron-double-down form-toggle"></i>
+        <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-
-    <header>
-      <div >
+    <!-- Header with avatar -->
+    <header class="avatar-header">
+      <div>
         <img class="avatar" src="/images/profile-hex.png" />
       </div>
       <br />
@@ -59,20 +68,59 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-   
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
+          <div class="counter-button">
+            <button class="submitButton" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-    </main>
 
+      <!-- Section for the new tweet -->
+      <section class="new-tweet-section">
+        <article>
+          <header>
+            <div> 
+              <img class="smaller" src="https://i.imgur.com/73hZDYK.png" alt="male-avatar">
+              <span>Newton</span>
+            </div>
+            <div class="tweeter-name"> @Isaac</div>
+          </header>
+          <div class="body-text"> Look forward not backward or you will get hit by a car</div>
+          <footer>
+            <div>90 days ago</div>
+            <div class="tweet-action">
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-flag"></i>
+              <i class="far fa-heart"></i>
+            </div>
+            </footer>
+        </article>
+
+        <article>
+          <header>
+            <div> 
+              <img src="" alt="">
+              <span>Newton</span>
+            </div>
+            <div> @Isaac</div>
+          </header>
+          <div class="body-text"> Look forward not backward or you will get hit by a car</div>
+          <footer>
+            <div>90 days ago</div>
+            <div>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-flag"></i>
+              <i class="far fa-heart"></i>
+            </div>
+            </footer>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
