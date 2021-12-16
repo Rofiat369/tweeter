@@ -35,3 +35,27 @@ main{
   background-color: #f4f1ec;
 }
 
+.back-to-top {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: blue;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message{
+  border: 2px solid red;
+  color: blue;
+  padding: 5% 20% 5% 25%;
+  display: none;
+}
