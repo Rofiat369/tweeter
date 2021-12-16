@@ -69,7 +69,6 @@ $(document).ready(function () {
         $("#Too-Long").slideDown(350, function(){
           setTimeout(()=> $('#Too-Long').slideUp(350), 5000)
         });
-        //alert('Tweet too long');
       } else {
         $.ajax({
           method: "POST",

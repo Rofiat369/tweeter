@@ -28,7 +28,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main{
+main {
   width: 90%;
   padding: 0 5% 0 5%;
   margin: 0 auto;
@@ -47,15 +47,27 @@ main{
   color: white;
   font-size: 2rem;
   font-weight: bold;
-  /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.error-message{
+.error-message {
   border: 2px solid red;
   color: blue;
   padding: 5% 20% 5% 25%;
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+ nav{
+  background-color: #000b38;
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+ }
+ 
+  .mediaQueries {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+  }
 }

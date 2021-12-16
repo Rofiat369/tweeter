@@ -6,17 +6,41 @@
   align-items: center;
   justify-content: center;
   margin-top: 5em;
-  background-color: #0060c7;
-  background-image: url("https://www.transparenttextures.com/patterns/food.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-color: #000b38;
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+  color: white;
 }
 
-.avatar{
+.avatar {
   padding-top: 20%;
 }
-/* .sydney {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: blueviolet;
-} */
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #1a0052;
+    background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
+  }
+
+  .mediaQueries {
+    display: flex;
+    flex-direction: row;
+    margin: 120px;
+    padding: 20px 0 0 0;
+  }
+
+  .avatar-header {
+    flex: 0.35;
+    margin: 60px 20px 0 0;
+    float: left;
+    background-color: #000b38;
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+    background-color: brown;
+    color: white;
+  }
+
+  .container {
+    padding-left: 140px;
+    flex: 0.65;
+    float: right;
+  }
+}
